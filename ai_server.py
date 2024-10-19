@@ -50,4 +50,5 @@ def fetch_ohlc():
         return jsonify({'error': 'Failed to fetch data from Polygon.io'}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
+    port=int(os.getenv('PORT'))
+    app.run(host='0.0.0.0', port=port)
